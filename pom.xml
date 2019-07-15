@@ -5,20 +5,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.imsavva</groupId>
-    <artifactId>primefaces-tomcat-sample</artifactId>
+    <artifactId>primefaces-jetty-sample</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>primefaces-tomcat-sample Maven Webapp</name>
+    <name>primefaces-jetty-sample Maven Webapp</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
         <jsf-version>2.4.0</jsf-version>
         <servlet-version>3.1.0</servlet-version>
-        <tomcat-version>2.2</tomcat-version>
+        <jetty-version>9.4.5.v20170502</jetty-version>
         <junit-version>5.5.0</junit-version>
+        <el-api-version>3.0.0</el-api-version>
+        <jsp-api-version>2.3.3</jsp-api-version>
     </properties>
 
     <dependencies>
@@ -32,6 +32,19 @@
             <groupId>org.glassfish</groupId>
             <artifactId>javax.faces</artifactId>
             <version>${jsf-version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.el</artifactId>
+            <version>${el-api-version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>javax.servlet.jsp-api</artifactId>
+            <version>${jsp-api-version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -42,16 +55,12 @@
     </dependencies>
 
     <build>
-        <finalName>primefaces-tomcat-sample</finalName>
+        <finalName>primefaces-jetty-sample</finalName>
         <plugins>
             <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>${tomcat-version}</version>
-                <configuration>
-                    <port>9090</port>
-                    <path>/</path>
-                </configuration>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>${jetty-version}</version>
             </plugin>
         </plugins>
     </build>
