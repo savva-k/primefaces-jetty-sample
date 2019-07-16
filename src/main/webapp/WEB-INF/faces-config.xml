@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigation-rule>
+    <from-view-id>index.xhtml</from-view-id>
+
+    <navigation-case>
+        <from-outcome>destination</from-outcome>
+        <to-view-id>destination.xhtml</to-view-id>
+    </navigation-case>
+
+</navigation-rule>

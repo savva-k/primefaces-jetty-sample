@@ -37,4 +37,5 @@ public class Destination implements Serializable {
     public void setLongitude(double longitude) {
         this.longitude = longitude;
     }
+
 }
