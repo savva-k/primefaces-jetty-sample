@@ -13,10 +13,11 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jsf-version>2.4.0</jsf-version>
+        <jsf-version>2.3.0</jsf-version>
         <servlet-version>3.1.0</servlet-version>
         <jetty-version>9.4.5.v20170502</jetty-version>
         <junit-version>5.5.0</junit-version>
+        <primefaces-version>6.1</primefaces-version>
         <el-api-version>3.0.0</el-api-version>
         <jsp-api-version>2.3.3</jsp-api-version>
     </properties>
@@ -34,6 +35,18 @@
             <version>${jsf-version}</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.primefaces</groupId>
+            <artifactId>primefaces</artifactId>
+            <version>${primefaces-version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.weld.servlet</groupId>
+            <artifactId>weld-servlet</artifactId>
+            <version>2.4.8.Final</version>
+        </dependency>
+
         <dependency>
             <groupId>org.glassfish</groupId>
             <artifactId>javax.el</artifactId>
